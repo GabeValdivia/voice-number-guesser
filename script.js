@@ -33,6 +33,19 @@ function checkNumber(msg) {
 	if(num > 100 || num < 1) {
 		msgEl.innerHTML = '<div>Number must be between 1 and 100</div>'
 	}
+
+	// Check number
+	if(num === randomNum){
+		document.body.innerHTML = `
+			<h2>Congrats! You have guessed the number! <br><br>
+			It was ${num}</h2>
+			<buttton class="play-again" id="play-again">Play Again</button>
+		`;
+	} else if (num > randomNum) {
+		msgEl.innerHTML += '<div>GO Lower!!!</div>'
+	} else {
+		msgEl.innerHTML += '<div>GO Higher!!!</div>'
+	}
 }
 
 // Write what user speaks
