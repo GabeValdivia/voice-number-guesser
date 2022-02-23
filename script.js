@@ -16,7 +16,18 @@ function onSpeak(e) {
 	const msg = e.results[0][0].transcript;
 
 	writeMessage(msg);
-	//checkNumber(msg);
+	checkNumber(msg);
+}
+
+// Check message against number
+function checkNumber(msg) {
+	const num = +msg;
+
+	// Check if valid number
+	if(Number.isNaN(num)){
+		msgEl.innerHTML = '<div>is not a valid number</div>';
+		return;
+	}
 }
 
 // Write what user speaks
