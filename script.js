@@ -28,6 +28,11 @@ function checkNumber(msg) {
 		msgEl.innerHTML = '<div>is not a valid number</div>';
 		return;
 	}
+
+	// Check if in range
+	if(num > 100 || num < 1) {
+		msgEl.innerHTML = '<div>Number must be between 1 and 100</div>'
+	}
 }
 
 // Write what user speaks
