@@ -1,8 +1,7 @@
 const msgEl = document.getElementById('msg');
-
 const randomNum = getRandomNumber();
 
-console.log(`Number: ${randomNum}`);
+// console.log(`Number: ${randomNum}`);
 
 window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
 
@@ -14,7 +13,6 @@ recognition.start();
 // Capture user speak
 function onSpeak(e) {
 	const msg = e.results[0][0].transcript;
-
 	writeMessage(msg);
 	checkNumber(msg);
 }
@@ -25,7 +23,7 @@ function checkNumber(msg) {
 
 	// Check if valid number
 	if(Number.isNaN(num)){
-		msgEl.innerHTML = '<div>is not a valid number</div>';
+		msgEl.innerHTML += '<div>That is not a valid number</div>';
 		return;
 	}
 
@@ -55,7 +53,6 @@ function writeMessage(msg) {
 		<span class="box">${msg}</span>
 	`;
 }
-
 
 // Generate random number
 function getRandomNumber() {
