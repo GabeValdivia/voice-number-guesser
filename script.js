@@ -13,7 +13,9 @@ recognition.start();
 
 // Capture user speak
 function onSpeak(e) {
-	console.log(e);
+	const msg = e.results[0][0].transcript;
+
+	console.log(msg);
 }
 
 
