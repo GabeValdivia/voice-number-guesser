@@ -25,11 +25,13 @@ p {
 }
 
 .play-again {
+	cursor: pointer;
 	padding: 8px 15px;
 	border: 0;
 	background: #f4f4f4;
 	border-radius: 5px;
 	margin-top: 10px;
+	color: #2f3542;
 }
 
 .msg {

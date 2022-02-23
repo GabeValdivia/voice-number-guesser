@@ -67,3 +67,10 @@ recognition.addEventListener('result', onSpeak);
 
 // End SR service
 recognition.addEventListener('end', () => recognition.start());
+
+// Enable play again button
+document.body.addEventListener('click', (e) => {
+	if(e.target.id == 'play-again'){
+		window.location.reload();
+	}
+});
